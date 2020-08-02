@@ -2,26 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.codehaus.sonar-plugins</groupId>
-    <artifactId>parent</artifactId>
-    <version>18</version>
-  </parent>
-
-  <groupId>org.sonarqube.l10n.zhtw</groupId>
-  <artifactId>sonar-l10n-zhtw-plugin</artifactId>
+  <groupId>org.sonarqube.l10n.zh-tw</groupId>
+  <artifactId>sonar-l10n-zh-tw-plugin</artifactId>
   <packaging>sonar-plugin</packaging>
-  <version>1.0</version>
+  <version>1.1</version>
 
   <name>Traditional Chinese Language Pack</name>
-  <url>https://github.com/SonarQubeCommunity/sonar-l10n-zhtw</url>
-  <inceptionYear>2019</inceptionYear>
+  <url>https://github.com/vongola12324/sonar-l10n-zh-tw</url>
+  <inceptionYear>2020</inceptionYear>
   <description>SonarQube Traditional Chinese Language Pack (not compatible with the “Chinese Pack” which uses Simplified Chinese)</description>
-
-  <organization>
-    <name>Tim Lee</name>
-    <url>https://github.com/SonarQubeCommunity/sonar-l10n-zhtw</url>
-  </organization>
 
   <licenses>
     <license>
@@ -32,20 +21,20 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:https://github.com/SonarQubeCommunity/sonar-l10n-zhtw.git</connection>
-    <developerConnection>scm:git:https://github.com/SonarQubeCommunity/sonar-l10n-zhtw.git</developerConnection>
-    <url>https://github.com/SonarQubeCommunity/sonar-l10n-zhtw</url>
+    <connection>scm:git:https://github.com/vongola12324/sonar-l10n-zh-tw.git</connection>
+    <developerConnection>scm:git:https://github.com/vongola12324/sonar-l10n-zh-tw.git</developerConnection>
+    <url>https://github.com/vongola12324/sonar-l10n-zh-tw</url>
     <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>https://github.com/SonarQubeCommunity/sonar-l10n-zhtw/issues</url>
+    <url>https://github.com/vongola12324/sonar-l10n-zh-tw/issues</url>
   </issueManagement>
 
   <properties>
     <sonar.pluginClass>org.sonar.plugins.l10n.TraditionalChinesePackPlugin</sonar.pluginClass>
-    <sonar.version>8.0</sonar.version>
+    <sonar.version>8.4</sonar.version>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -69,72 +58,37 @@
       <version>${sonar.version}</version>
       <scope>test</scope>
     </dependency>
-	<!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-plugin-api -->
-	<dependency>
-	    <groupId>org.codehaus.sonar</groupId>
-	    <artifactId>sonar-plugin-api</artifactId>
-	    <version>4.3</version>
-	    <scope>provided</scope>
-	</dependency>
-	<dependency>
-	  <groupId>junit</groupId>     
-	  <artifactId>junit-dep</artifactId>
-	  <version>4.8.2</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/animal-sniffer-maven-plugin -->
-	<dependency>
-	    <groupId>org.codehaus.mojo</groupId>
-	    <artifactId>animal-sniffer-maven-plugin</artifactId>
-	    <version>1.18</version>
-	</dependency>
-
-	
+    <!-- TODO: sonar-testing-harness 8.1.0 missing hamcrest-core version -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <developers>
     <developer>
-      <id>timlee</id>
-      <name>Tim Lee</name>
+      <id>vongola12324</id>
+      <name>Vongola</name>
       <organization></organization>
       <organizationUrl></organizationUrl>
     </developer>
   </developers>
 
   <build>
-  <pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
         <artifactId>sonar-packaging-maven-plugin</artifactId>
-        <version>1.19</version>
+        <version>1.18.0.372</version>
         <extensions>true</extensions>
         <configuration>
           <basePlugin>l10nen</basePlugin>
-          <pluginName>Traditional Chinese Pack</pluginName>
-          <pluginDescription>Language Pack for Traditional Chinese</pluginDescription>
+          <pluginName>Chinese Pack</pluginName>
+          <pluginDescription>Language pack for Chinese</pluginDescription>
         </configuration>
       </plugin>
-      
-      <plugin>
-		  <groupId>org.codehaus.mojo</groupId>
-		  <artifactId>animal-sniffer-maven-plugin</artifactId>
-		  <version>1.18</version>
-		  <executions>
-			<execution>
-			  <phase>test</phase>
-			  <goals>
-				<goal>check</goal>
-			  </goals>
-			</execution>
-		  </executions>
-		  <configuration>
-			<signature>
-			  <groupId>org.codehaus.mojo.signature</groupId>
-			  <artifactId>java18</artifactId>
-			  <version>1.0</version>
-			</signature>
-		  </configuration>
-		</plugin>
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -148,35 +102,7 @@
           </execution>
         </executions>
       </plugin>
-      <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-      <plugin>
-      	<groupId>org.eclipse.m2e</groupId>
-      	<artifactId>lifecycle-mapping</artifactId>
-      	<version>1.0.0</version>
-      	<configuration>
-      		<lifecycleMappingMetadata>
-      			<pluginExecutions>
-      				<pluginExecution>
-      					<pluginExecutionFilter>
-      						<groupId>org.codehaus.sonar</groupId>
-      						<artifactId>
-      							sonar-packaging-maven-plugin
-      						</artifactId>
-      						<versionRange>[1.5,)</versionRange>
-      						<goals>
-      							<goal>check-dependencies</goal>
-      						</goals>
-      					</pluginExecutionFilter>
-      					<action>
-      						<ignore></ignore>
-      					</action>
-      				</pluginExecution>
-      			</pluginExecutions>
-      		</lifecycleMappingMetadata>
-      	</configuration>
-      </plugin>
     </plugins>
-    </pluginManagement>
   </build>
 
 <!--
