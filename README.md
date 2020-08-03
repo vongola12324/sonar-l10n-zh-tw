@@ -1,6 +1,6 @@
 # The Traditional Chinese Language Pack for SonarQube
-SonarQube 繁體中文套件(Traditional Chinese Language Pack)
-This is the Traditional Chinese Language Pack of SonarQube.
+SonarQube 繁體中文套件(Traditional Chinese Language Pack)  
+This is the Traditional Chinese Language Pack of SonarQube.  
 
 ## Author 
 - Tim Lee <wentin.lee@gmail.com>
@@ -18,13 +18,14 @@ sonar-l10n-zhtw |1.0    |       |       |      |       |       |       |       |
 sonar-l10n-zhtw |1.0   |1.0   |1.0   |1.0   |1.0   |
 
 ## Issue
-If there is any problem, like typo, missing translation, or wrong translation, you can just open an issue and let me know it or just send a PR.
-如果有任何問題，像是：錯字、缺少翻譯或是翻譯錯誤，你可以開一個issue讓我知道，或是直接發PR過來。
-Issue Tracker: https://github.com/vongola12324/sonar-l10n-zh-tw/issues
-（因為我沒有SonarQube開發者版或企業版，所以有部分頁面我沒辦法測試。）
+If there is any problem, like typo, missing translation, or wrong translation, you can just open an issue and let me know it or just send a PR.  
+如果有任何問題，像是：錯字、缺少翻譯或是翻譯錯誤，你可以開一個issue讓我知道，或是直接發PR過來。  
+Issue Tracker: https://github.com/vongola12324/sonar-l10n-zh-tw/issues  
+（因為我沒有SonarQube開發者版或企業版，所以有部分頁面我沒辦法測試。）  
 
 ## Not to translate list
-除了一些對應到外部網站的專有名詞，仍有部分單詞因為某些原因沒有翻成中文，這邊就列出來，有疑問一樣也歡迎開issue討論。
+除了一些對應到外部網站的專有名詞，仍有部分單詞因為某些原因沒有翻成中文，這邊就列出來，有疑問一樣也歡迎開issue討論。  
+
 | Original (原文)  | Chinese (可能翻譯) | 原因 |
 | --------------- | ---------------| ----|
 | Repository | 倉庫、倉、庫 | 翻譯後可能反而看不懂 |
